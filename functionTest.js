@@ -1,15 +1,22 @@
-var abs = function(x) {
-    if(typeof(x) !== 'number') {
-        alert('Not a Number');
-        throw 'Not a Number';
+function foo(x) {
+    alert(x);
+    for(var i = 0; i < arguments.length; i++) {
+        alert(arguments[i]);
     }
-    if(x >= 0) {
-        return x;
-    } else {
-        return -x;
-    }
-};
+}
 
-alert(abs(10, 'abcd'));
-//alert(abs(-3, 'hello'));
-alert(abs());
+//foo(10, 20, 30);
+
+function foo(a, b) {
+    var i, rest = [];
+    if(arguments.length > 2) {
+        for(i = 2; i < arguments.length; i++) {
+            rest.push(arguments[i]);
+        }
+    }
+    console.log('a = ' + a);
+    console.log('b = ' + b);
+    console.log(rest);
+}
+
+foo(10, 20, 30, 40, 50);
