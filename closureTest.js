@@ -36,6 +36,7 @@ alert(f2());
 alert(f3());
 */
 
+/*
 'use strict';
 
 function create_counter(initial) {
@@ -55,3 +56,16 @@ var c2 = create_counter(10);
 alert(c2.inc());
 alert(c2.inc());
 alert(c2.inc());
+*/
+
+function make_pow(n) {
+    return function(x) {
+        return Math.pow(x, n);
+    }
+}
+
+var pow2 = make_pow(2);
+var pow3 = make_pow(3);
+
+alert(pow2(5));
+alert(pow3(7));
