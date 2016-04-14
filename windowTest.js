@@ -25,5 +25,14 @@ if(confirm('reload current page ' + location.href + '?')) {
 
 window.onload = function() {
     var menu = document.getElementById('drink-menu');
-    alert(menu);
+    var drinks = document.getElementsByTagName('dt');
+    var i, s;
+    s = 'Provided drinks are: ';
+    for(i = 0; i < drinks.length; i++) {
+        s = s + drinks[i].innerHTML + ',';
+    }
+    //alert(s);
+    //alert(document.cookie.length);
+    alert(history.back());
+    alert(history.forward());
 }
