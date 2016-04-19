@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function checkForm() {
+	var form = document.getElementById('test-form');
+	var input = document.getElementById('test');
+	
+	if(input.value === 'test') {
+		return true;
+	} else {
+		alert('input value must be test');
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+	<form action="" id="test-form" onsubmit="return checkForm()">
+		<input type="text" name="test" id="test">
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
