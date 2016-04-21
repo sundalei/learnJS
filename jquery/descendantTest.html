@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>descendant selector test</title>
+    <script type="text/javascript" src="jquery-2.2.3.js"></script>
+    <script type="text/javascript">
+        $().ready(function() {
+            //var js = $('ul.lang> li.lang-javascript');          
+            //var js = $('div.testing> li.lang-javascript');
+            //alert(js.text());
+            //var selected = $('div.testing li');
+            //alert(langs.text());
+            
+           //var selected = $('ul.lang li');
+           var selected = $('ol.test-lang li:last-child');
+           //var selected = $('ul.lang li:first-child');
+           //var selected = $('ul.lang li:last-child');
+           //var selected = $('ul.lang li:nth-child(2)');
+           //var selected = $('ul.lang li:nth-child(even)');
+           //var selected = $('ul.lang li:nth-child(odd)');
+           
+           if (!(selected instanceof jQuery)) {
+               return alert('不是有效的jQuery对象!');
+           }
+           $('#test-jquery').find('*').css('background-color', '');
+           selected.css('background-color', '#ffd351'); 
+        });
+    </script>
+</head>
+
+<body>
+    <div class="testing">
+        <ul class="lang">
+            <li class="lang-javascript">JavaScript</li>
+            <li class="lang-python">Python</li>
+            <li class="lang-lua">Lua</li>
+        </ul>
+        <ol class="test-lang">
+            <li class="lang-swift">Swift</li>
+            <li class="lang-java">Java</li>
+            <li class="lang-c">C</li>
+        </ol>
+    </div>
+</body>
+
+</html>

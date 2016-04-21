@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>descendant selector test</title>
+    <script type="text/javascript" src="jquery-2.2.3.js"></script>
+    <script type="text/javascript">
+        $().ready(function() {
+            $('input[name=email]').focus();
+           //var selected = $(':input');
+           //var selected = $(':file');
+           //var selected = $(':checkbox');
+           //var selected = $(':radio');
+           
+           //var selected = $(':disabled');
+           var selected = $('div:visible');
+           alert(selected.length);
+           
+           if (!(selected instanceof jQuery)) {
+               return alert('不是有效的jQuery对象!');
+           }
+           $('#test-jquery').find('*').css('background-color', '');
+           selected.css('background-color', '#ffd351'); 
+        });
+    </script>
+</head>
+
+<body>
+    <div id="test-jquery">
+        <p id="para-1" class="color-red">JavaScript</p>
+        <p id="para-2" class="color-green">Haskell</p>
+        <p class="color-red color-green">Erlang</p>
+        <p name="name" class="color-black">Python</p>
+        <form class="test-form" target="_blank" action="#0" onsubmit="return false;">
+            <legend>注册新用户</legend>
+            <fieldset>
+                <p>
+                    <label>名字:
+                        <input name="name" disabled>
+                    </label>
+                </p>
+                <p>
+                    <label>邮件:
+                        <input name="email">
+                    </label>
+                </p>
+                <p>
+                    <label>口令:
+                        <input name="password" type="password">
+                    </label>
+                </p>
+                <p>
+                    <label>文件:
+                        <input name="file1" type="file">
+                    </label>
+                </p>
+                <p>
+                    <label>文件:
+                        <input name="file2" type="file">
+                    </label>
+                </p>
+                <p>
+                    <label>兴趣:
+                        <input name="checkbox1" type="checkbox" checked>电影&nbsp;
+                        <input name="checkbox1" type="checkbox" checked>音乐&nbsp;
+                        <input name="checkbox1" type="checkbox">戏剧&nbsp;
+                    </label>
+                </p>
+                <p>
+                    <label>兴趣:
+                        <input name="radio1" type="radio" checked>电影&nbsp;
+                        <input name="radio1" type="radio">音乐&nbsp;
+                        <input name="radio1" type="radio">戏剧&nbsp;
+                    </label>
+                </p>
+                <p>
+                    <label>留言:
+                        <textarea></textarea>
+                    </label>
+                </p>
+                <p>
+                    <label>地址:
+                        <select>
+                            <option>北京</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <button type="submit">注册</button>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+    <div>abc</div>
+    <div style="display: none">dec</div>
+</body>
+
+</html>
