@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>selector test</title>
+        <script type="text/javascript" src="jquery-2.2.3.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            var div = $('#abc');
+            var divDom = div.get(0);
+            var another = $(divDom);
+            
+            var ps = $('p');
+            //alert(ps.length);
+            
+            var a = $('.red');
+            //alert(a.length);
+            
+            var a = $('.red.green');
+            //alert(a.length);
+            
+            var email = $('input[name=email]');
+            alert(email.length);
+        });
+        </script>
+    </head>
+    <body>
+        <h1>hello world</h1>
+        <div id="abc" class="red" name="email"></div>
+        <p class="red"></p>
+        <p class="green red"></p>
+        <div class="red green"></div>
+        <div class="blue green red"></div>
+        
+        <form>
+            <input type="text" name="email">
+        </form>
+    </body>
+</html>
