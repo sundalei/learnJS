@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>filter test</title>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        
+        $(document).ready(function() {
+            var langs = $('ul.lang li');
+            //var a = langs.filter('.dy');
+            /*
+            var a = langs.filter(function() {
+                return this.innerHTML.indexOf('S') === 0;
+            });
+            alert(a.length);
+            
+            for(var i = 0; i < a.length; i++) {
+                var result = a[i].innerHTML;
+                alert(result);
+            }
+            */
+            /*
+            var arr = langs.map(function() {
+                return this.innerHTML;
+            }).get();
+            alert(arr);
+            */
+            var js = langs.first();
+            alert(js.text());
+            var haskell = langs.last();
+            alert(haskell.text());
+            var sub = langs.slice(2, 4);
+            alert(sub.text());
+        });
+        
+    </script>
+</head>
+
+<body>
+    <ul class="lang">
+        <li class="js dy">JavaScript</li>
+        <li class="dy">Python</li>
+        <li id="swift">Swift</li>
+        <li class="dy">Scheme</li>
+        <li name="haskell">Haskell</li>
+    </ul>
+</body>
+
+</html>
