@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>operate dom test</title>
+    <script type="text/javascript" src="jquery-2.2.3.js"></script>
+    <script type="text/javascript">
+        $().ready(function() {
+            /*
+             var text = $('#test-ul li[name=book]').text();
+             var html = $('#test-ul li[name=book]').html();
+             alert('text: ' + text);
+             alert('html: ' + html);
+             */
+            
+            /*
+            var j1 = $('#test-ul li.js');
+            var j2 = $('#test-ul li[name=book]');
+            
+            j1.html('<span style="color: red">JavaScript</span>');
+            j2.text('JavaScript & ECMAScript');
+            */
+            $('#not-exist').text('Hello');
+            $('#test-ul li').text('JS');
+            
+        });
+    </script>
+</head>
+
+<body>
+    <ul id="test-ul">
+        <li class="js">JavaScript</li>
+        <li name="book">Java &amp; JavaScript</li>
+    </ul>
+</body>
+
+</html>
