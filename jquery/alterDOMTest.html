@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>alter DOM test</title>
+    <script type="text/javascript" src="jquery-2.2.3.js"></script>
+    <script type="text/javascript">
+        $().ready(function() {
+            var ul = $('#test-div>ul');
+            ul.append('<li><span>Haskell</span></li>');
+            
+            var ps = document.createElement('li');
+            ps.innerHTML = '<span>Pascal</span>';
+            ul.append(ps);
+            
+            ul.append($('#scheme'));
+            
+            ul.append(function (index, html) {
+                return '<li><span>Language - ' + index + '</span></li>';
+            });
+            ul.append(function (index, html) {
+                return '<li><span>Language - ' + index + '</span></li>';
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <li id="scheme"><span>Scheme</span></li>
+    <div id="test-div">
+        <ul>
+            <li><span>JavaScript</span></li>
+            <li><span>Python</span></li>
+            <li><span>Swift</span></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

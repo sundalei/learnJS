@@ -5,13 +5,24 @@
     <script type="text/javascript" src="jquery-2.2.3.js"></script>
     <script type="text/javascript">
         $().ready(function() {
-            //$('#test-css li.dy>span').css('background-color', '#ffd351').css('color', 'red');
-            $('#test-css li.dy').show();
+            var width = $(window).width();
+            var height = $(window).height();
+            alert(width + " :" + height);
+            
+            width = $(document).width();
+            height = $(document).height();
+            alert(width + " : " + height);
+            
+            var div = $('#test-div');
+            width = $(div).width();
+            height = $(div).height();
+            alert(width + " : " + height);
         });
     </script>
 </head>
 
 <body>
+    <div id="test-div">
     <ul id="test-css">
         <li class="lang dy"><span>JavaScript</span></li>
         <li class="lang"><span>Java</span></li>
@@ -19,6 +30,7 @@
         <li class="lang"><span>Swift</span></li>
         <li class="lang dy"><span>Scheme</span></li>
     </ul>
+    </div>
 </body>
 
 </html>
