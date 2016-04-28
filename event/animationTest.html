@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>alter DOM test</title>
+    <script type="text/javascript" src="../jquery/jquery-2.2.3.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var div = $('#test-show-hide');
+            div.hide(3000);
+            div.show('slow');
+        });
+    </script>
+</head>
+
+<body>
+    <div style="border: 1px solid #ccc; padding: 10px; margin: 10px 0">
+        <div style="padding: 10px 0">
+            <button class="uk-button" onclick="$('#test-show-hide').hide('slow');">hide('slow')</button>
+            <button class="uk-button" onclick="$('#test-show-hide').show('slow');">show('slow')</button>
+            <button class="uk-button" onclick="$('#test-show-hide').toggle('slow');">toggle('slow')</button>
+        </div>
+        <div style="height: 128px;">
+            <div id="test-show-hide" style="width: 128px; height: 128px; background-color: #ccc; background-image: url(404.png)"></div>
+        </div>
+    </div>
+</body>
+
+</html>
