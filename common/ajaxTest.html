@@ -4,15 +4,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-function success(text) {
-    var textarea = document.getElementById('test-response-text');
-    textarea.value = text;
-}
-
-function fail(code) {
-    var textarea = document.getElementById('test-response-text');
-    textarea.value = 'Error code: ' + code;
-}
 
 function refreshPrice(data) {
     var p = document.getElementById('test-jsonp');
@@ -24,30 +15,11 @@ function refreshPrice(data) {
 }
 
 function checkForm() {
-	var request;
-	if (window.XMLHttpRequest) {
-	    request = new XMLHttpRequest();
-	} else {
-	    request = new ActiveXObject('Microsoft.XMLHTTP');
-	}
 	
 	var js = document.createElement('script');
 	var head = document.getElementsByTagName('head')[0];
 	js.src = 'http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice';
 	head.appendChild(js);
-	
-	request.onreadystatechange = function() {
-		if(request.readyState === 4) {
-			if(request.status === 200) {
-				return success(request.responseText);
-			} else {
-				return fail(request.status);
-			}
-		}
-	}
-	request.open('GET', 'TestServlet');
-	request.send();
-	alert(request);
 }
 </script>
 </head>

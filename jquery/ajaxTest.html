@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>ajax test</title>
+    <script type="text/javascript" src="jquery-2.2.3.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('button').click(function() {
+            	function ajaxLog(s) {
+            	    var txt = $('#test-response-text');
+            	    txt.val(txt.val() + '\n' + s);
+            	}
+            	
+            	$('#test-response-text').val('');
+            	
+            	/*
+            	var jqxhr = $.ajax('TestServlet', {
+            		dataType: 'json'
+            	}).done(function(data) {
+            		ajaxLog('Success: ' + JSON.stringify(data));
+            	}).fail(function(xhr, status) {
+            		ajaxLog('Fail: ' + xhr.status + ', reason: ' + status);
+            	}).always(function (data) {
+            	    ajaxLog('done');
+            	});
+            	*/
+            	
+            	/*
+            	var jqxhr = $.get('TestServlet', {
+            		name: 'Bob lee',
+            		check: 1
+            	}, {
+            		dataType: 'json'
+            	}).done(function(data) {
+            		ajaxLog('Success: ' + JSON.stringify(data));
+            	}).fail(function(xhr, status) {
+            		ajaxLog('Fail: ' + xhr.status + ', reason: ' + status);
+            	}).always(function (data) {
+            	    ajaxLog('done');
+            	});
+            	*/
+            	
+            	/*
+            	var jqxhr = $.post('TestServlet', {
+            		name: 'Bob lee',
+            		check: 1
+            	}, {
+            		dataType: 'json'
+            	}).done(function(data) {
+            		ajaxLog('Success: ' + JSON.stringify(data));
+            	}).fail(function(xhr, status) {
+            		ajaxLog('Fail: ' + xhr.status + ', reason: ' + status);
+            	}).always(function (data) {
+            	    ajaxLog('done');
+            	});
+            	*/
+            	
+            	var jqxhr = $.getJSON('TestServlet', {
+            		name: 'Bob lee',
+            		check: 1
+            	}, {
+            		dataType: 'json'
+            	}).done(function(data) {
+            		ajaxLog('Success: ' + JSON.stringify(data));
+            	}).fail(function(xhr, status) {
+            		ajaxLog('Fail: ' + xhr.status + ', reason: ' + status);
+            	}).always(function (data) {
+            	    ajaxLog('done');
+            	});
+            });
+        });
+    </script>
+</head>
+
+<body>
+	<button type="button" class="uk-button uk-button-primary" style="margin-top:15px;"><i class="uk-icon-play"></i> Run</button>
+    <textarea id="test-response-text" rows="10" style="width: 90%; margin: 15px 0; resize: none;">Response result:</textarea>
+</body>
+
+</html>
