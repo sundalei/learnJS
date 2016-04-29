@@ -8,13 +8,21 @@
     }
     </style>
     <script src="../jquery/jquery-2.2.3.js"></script>
+    <script src="underscore.js"></script>
     <script>
         $(function() {
+            /*
             var a1 = [1, 4, 9, 16];
             var a2 = a1.map(Math.sqrt);
             alert(a2);
             var a3 = a2.filter((x) => {return x % 2 === 0});
             alert(a3);
+            */
+            
+            var arr = _.map([1, 2, 3], (x) => x * x);
+            alert(arr);
+            var arr2 = _.map({a: 1, b: 2, c: 3}, (v, k) => k + '=' + v);
+            alert(arr2);
         });
     </script>
 </head>
