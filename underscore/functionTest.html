@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>function test</title>
+    <script src="underscore.js"></script>
+    <script src="../jquery/jquery-2.2.3.js"></script>
+    <script>
+
+    console.log('Hello, world!');
+
+    //var log = console.log;
+    //log('Hello, world!');
+
+    //var log = console.log;
+    //log.call(console, 'Hello, world!');
+
+    //var log = _.bind(console.log, console);
+    //log('Hello, world!');
+
+    //var pow2N = _.partial(Math.pow, 2);
+    //pow2N(3);
+    //pow2N(5);
+    //pow2N(10);
+
+    var cube = _.partial(Math.pow, _, 3);
+    cube(3);
+    cube(5);
+    cube(10);
+
+    </script>
+  </head>
+  <body></body>
+</html>

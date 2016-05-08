@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>function test</title>
+    <script src="underscore.js"></script>
+    <script src="../jquery/jquery-2.2.3.js"></script>
+    <script>
+
+    /*
+    function factorial(n) {
+      console.log('start calculate ' + n + '!...');
+      var s = 1, i = n;
+      while(i > 1) {
+        s = s * i;
+        i--;
+      }
+      console.log(n + '! = ' + s);
+      return s;
+    }*/
+
+    /*
+    var factorial = _.memoize(function(n) {
+      console.log('start calculate ' + n + '!...');
+      var s = 1, i = n;
+      while(i > 1) {
+        s = s * i;
+        i--;
+      }
+      console.log(n + '! = ' + s);
+      return s;
+    });*/
+
+    var factorial = _.memoize(function(n) {
+      console.log('start calculate ' + n + '!...');
+      if(n < 2) {
+        return 1;
+      }
+      return n * factorial(n - 1);
+    });
+
+    factorial(10);
+
+    </script>
+  </head>
+  <body></body>
+</html>
