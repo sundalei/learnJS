@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>object test</title>
+        <script src="underscore.js"></script>
+        <script src="../jquery/jquery-2.2.3.js"></script>
+        <script>
+            $(document).ready(function(){
+              var source = {
+                name: 'xiaoming',
+                age: 20,
+                skills: ['JavaScript', 'HTML', 'CSS']
+              };
+
+              var copied = _.clone(source);
+              alert(JSON.stringify(copied, null, '  '));
+              source.skills === copied.skills;
+
+              var o1 = { name: 'Bob', skills: { Java: 90, JavaScript: 99 }};
+              var o2 = { name: 'Bob', skills: { JavaScript: 99, Java: 90 }};
+
+              o1 === o2;
+              _.isEqual(o1, o2);
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+    </body>
+</html>

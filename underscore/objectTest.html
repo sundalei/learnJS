@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>object test</title>
+        <script src="underscore.js"></script>
+        <script src="../jquery/jquery-2.2.3.js"></script>
+        <script>
+            $(document).ready(function(){
+              function Student(name, age) {
+                this.name = name;
+                this.age = age;
+              }
+
+              Student.prototype.school = 'No.1 Middle School';
+
+              var xiaoming = new Student('xiaoming', 20);
+              _.keys(xiaoming);
+              _.allKeys(xiaoming);
+              _.values(xiaoming);
+
+              var obj = {a : 1, b : 2, c : 3};
+              _.mapObject(obj, (v, k) => 100 + v);
+              _.invert(obj);
+
+              var a = {name : 'Bob', age : 20};
+              _.extend(a, {age: 15}, {age: 88, city: 'Beijing'});
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+    </body>
+</html>
