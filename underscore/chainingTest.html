@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>chaining test</title>
+    <script src="jquery/jquery-2.2.3.js"></script>
+    <script src="underscore.js"></script>
+    <script>
+      window.onload = function() {
+        var result = _.filter(_.map([1, 4, 9, 16, 25], Math.sqrt), x => x % 2 === 1);
+        alert(JSON.stringify(result));
+
+        var result2 = _.chain([1, 4, 9, 16, 25])
+         .map(Math.sqrt)
+         .filter(x => x % 2 === 1)
+         .value();
+        alert(result2);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+  </body>
+</html>
