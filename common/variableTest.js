@@ -1,4 +1,7 @@
-'use strict'
+'use strict';
+
+abc = 'hello, world';
+alert(abc);
 
 /*
 function foo() {
