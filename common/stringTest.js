@@ -2,6 +2,7 @@
 //alert('\u4e2d\u6587');
 
 var s = "Hello, world!";
+s.length;
 //alert(s.toUpperCase());
 //alert(s.toLowerCase());
 //alert(s.indexOf('world'));
