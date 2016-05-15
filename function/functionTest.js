@@ -1,3 +1,4 @@
+/*
 function abs(x) {
   var type = typeof x;  //undefined
   if(typeof x !== 'number') {
@@ -12,6 +13,7 @@ function abs(x) {
 
 var result = abs();
 result;
+*/
 
 /*
 function foo(x) {
@@ -22,6 +24,7 @@ function foo(x) {
 }
 
 foo(10, 20, 30);
+*/
 
 function foo(a, b, ...rest) {
     console.log('a = ' + a);
@@ -30,4 +33,11 @@ function foo(a, b, ...rest) {
 }
 
 foo(10, 20, 30, 40, 50);
-*/
+
+function sum(...rest) {
+  var result = 0;
+  for(var x of rest) {
+    result += x;
+  }
+  return result;
+}
