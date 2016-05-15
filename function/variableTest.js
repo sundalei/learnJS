@@ -1,14 +1,16 @@
 'use strict';
 
-abc = 'hello, world';
+/*
+var abc = 'hello, world';
 alert(abc);
+alert(window.abc);
+*/
 
 /*
 function foo() {
-    var y = 'Bob';
     var x = 'Hello, ' + y;
     alert(x);
-    //var y = 'Bob';
+    var y = 'Bob';
 }
 
 foo();
@@ -20,14 +22,12 @@ alert(course);
 alert(window.course);
 */
 
-/*
 function foo() {
     alert('foo');
 }
 
 foo();
 window.foo();
-*/
 
 /*
 window.alert('调用window.alert()');
@@ -48,6 +48,7 @@ MYAPP.foo = function() {
 };
 */
 
+/*
 function foo() {
     const PI = 3.14;
     PI = 3;
@@ -55,3 +56,4 @@ function foo() {
 }
 
 foo();
+*/

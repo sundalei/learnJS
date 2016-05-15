@@ -10,29 +10,27 @@ var xiaoming = {
     }
 };
 
-alert(xiaoming.age);
-alert(xiaoming.age());
+xiaoming.age;
+xiaoming.age();
 */
 
-/*
 function getAge() {
     var y = new Date().getFullYear();
     return y - this.birth;
 }
 
 var xiaoming = {
-   name: '小明',
+   name: 'xiaoming',
     birth: 1990,
     age : getAge
 };
 
-alert(xiaoming.age());
-alert(getAge.apply(xiaoming, []));
-*/
+xiaoming.age();
+getAge.apply(xiaoming, []);
 
 /*
 var xiaoming = {
-    name: '小明',
+    name: 'xiaoming',
     birth: 1990,
     age : function() {
         var that = this;
@@ -44,9 +42,10 @@ var xiaoming = {
     }
 };
 
-alert(xiaoming.age());
+xiaoming.age();
 */
 
+/*
 var count = 0;
 var oldParseInt = parseInt;
 
@@ -59,3 +58,4 @@ alert(parseInt('10'));
 alert(parseInt('20'));
 alert(parseInt('30'));
 alert(count);
+*/
