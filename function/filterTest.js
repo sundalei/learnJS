@@ -1,11 +1,9 @@
-/*
 var arr = [1, 2, 4, 5, 6, 9, 10, 15];
 var r = arr.filter(function(x) {
     return x % 2 !== 0;
 });
 
-alert(r);
-*/
+r;
 
 /*
 var arr = ['A', '', 'B', null, undefined, 'C', '  '];
@@ -16,8 +14,7 @@ var r = arr.filter(function(x) {
 alert(r);
 */
 
-'use strict'
-
+/*
 function get_primes(arr) {
    var r = arr.filter(function(x) {
        if(x === 1) {
@@ -43,3 +40,4 @@ if (r.toString() === [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53
 } else {
     alert('测试失败: ' + r.toString());
 }
+*/

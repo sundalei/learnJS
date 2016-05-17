@@ -1,4 +1,3 @@
-/*
 var arr = [10, 20, 1, 2];
 arr.sort(function(x, y) {
     if(x < y) {
@@ -11,7 +10,6 @@ arr.sort(function(x, y) {
 });
 
 alert(arr);
-*/
 
 /*
 var arr = ['Google', 'apple', 'Microsoft'];
@@ -20,7 +18,7 @@ arr.sort(function (s1, s2) {
     x2 = s2.toUpperCase();
     if(x1 < x2) {
         return -1;
-    } 
+    }
     if(x1 > x2) {
         return 1;
     }
