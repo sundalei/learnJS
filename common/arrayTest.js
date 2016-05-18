@@ -1,12 +1,16 @@
-//var arr = [1, 2, 3.14, 'Hello', null, true];
-//alert(arr.length);
+var arr = [1, 2, 3.14, 'Hello', null, true];
+arr.length;
 
-//var arr = [1, 2, 3];
-//alert(arr.length);
-//arr.length = 6;
-//alert(arr);
-//arr.length = 2;
-//alert(arr);
+/*********************************************************/
+
+var arr = [1, 2, 3];
+arr.length;
+arr.length = 6;
+arr;   // [1, 2, 3, undefined, undefined, undefined]
+arr.length = 2;
+arr;
+
+/*********************************************************/
 
 //var arr = ['A', 'B', 'C'];
 //arr[1] = 99;

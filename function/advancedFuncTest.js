@@ -1,13 +1,12 @@
-/*
 function add (x, y, f) {
     return f(x) + f(y);
 }
 
 var result = add(-5, 6, Math.abs);
 alert(result);
-*/
 
-/*
+/*******************************************************************************/
+
 function pow(x) {
     return x * x;
 }
@@ -15,17 +14,16 @@ function pow(x) {
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var result = arr.map(pow);
 alert(result);
-*/
 
-/*
+/*******************************************************************************/
+
 var arr = [1, 3, 5, 7, 9];
 var result = arr.reduce(function(x, y) {
     return x + y;
 });
-alert(result);*/
+alert(result);
 
-/*
-'use strict';
+/*******************************************************************************/
 
 function product(arr) {
     var result = arr.reduce(function(x, y) {
@@ -41,18 +39,16 @@ if (product([1, 2, 3, 4]) === 24 && product([0, 1, 2]) === 0 && product([99, 88,
 else {
     alert('测试失败!');
 }
-*/
 
-/*
+/*******************************************************************************/
+
 var arr = [1, 3, 5, 7, 9];
 var result = arr.reduce(function(x, y) {
     return 10 * x + y;
 });
-alert(result);*/
+alert(result);
 
-
-/*
-'use strict';
+/*******************************************************************************/
 
 function string2int(s) {
      var arr = s.split('');
@@ -77,10 +73,8 @@ if (string2int('0') === 0 && string2int('12345') === 12345 && string2int('12300'
 else {
     alert('测试失败!');
 }
-*/
 
-/*
-'use strict'
+/*******************************************************************************/
 
 function normalize(arr) {
     return arr.map(function(x) {
@@ -95,9 +89,8 @@ if (normalize(['adam', 'LISA', 'barT']).toString() === ['Adam', 'Lisa', 'Bart'].
 else {
     alert('测试失败!');
 }
-*/
 
-'use strict';
+/*******************************************************************************/
 
 var arr = ['1', '2', '3'];
 var r;
