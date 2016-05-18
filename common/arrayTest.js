@@ -12,9 +12,11 @@ arr;
 
 /*********************************************************/
 
-//var arr = ['A', 'B', 'C'];
-//arr[1] = 99;
-//alert(arr);
+var arr = ['A', 'B', 'C'];
+arr[1] = 99;
+arr;
+
+/*********************************************************/
 
 //var arr = [1, 2, 3];
 //arr[5] = 'X';
@@ -45,7 +47,6 @@ arr;
 //alert(added);
 //alert(added.join('-'));
 
-'use strict';
 var arr = ['abc', 'cde', 'hello', 'world'];
 arr.sort();
 var message = "welcome ";
