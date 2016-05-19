@@ -34,3 +34,22 @@ var xiaohong = new Student('xiaohong');
 xiaohong.hello === xiaoming.hello;
 
 /******************************************************************/
+
+function Student(props) {
+  this.name = props.name || 'anonymous';
+  this.grade = props.grade || 1;
+}
+
+Student.prototype.hello = function() {
+  alert('Hello, ' + this.name + '!');
+}
+
+function createStudent(props) {
+  return new Student(props || {});
+}
+
+var xiaoming = createStudent({
+  name: 'xiaoming'
+});
+
+xiaoming.grade;
