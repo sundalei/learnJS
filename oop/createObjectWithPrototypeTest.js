@@ -12,7 +12,7 @@ function PrimaryStudent(props) {
 }
 
 function F() {
-    
+
 }
 
 F.prototype = Student.prototype;
@@ -29,15 +29,15 @@ var xiaoming = new PrimaryStudent({
     name: 'xiaoming',
     grade: 1
 });
-//alert(xiaoming.name);
-//alert(xiaoming.grade);
-//xiaoming.hello();
-//alert(xiaoming.getGrade());
 
-var result1 = xiaoming.__proto__ === PrimaryStudent.prototype; // true
-var result2 = xiaoming.__proto__.__proto__ === Student.prototype; // true
+xiaoming.name;
+xiaoming.grade;
+xiaoming.hello();
+xiaoming.getGrade();
 
-// 验证继承关系:
-var result3 = xiaoming instanceof PrimaryStudent; // true
-var result4 = xiaoming instanceof Student; // true
-alert(result1 + ": " + result2 + ": " + result3 + ": " + result4);
+xiaoming.__proto__ === PrimaryStudent.prototype; // true
+xiaoming.__proto__.__proto__ === Student.prototype; // true
+
+
+xiaoming instanceof PrimaryStudent; // true
+xiaoming instanceof Student; // true
