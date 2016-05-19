@@ -18,34 +18,44 @@ arr;
 
 /*********************************************************/
 
-//var arr = [1, 2, 3];
-//arr[5] = 'X';
-//alert(arr);
+var arr = [1, 2, 3];
+arr[5] = 'X';
+arr;
 
-//var arr = [10, 20, '30', 'xyz'];
-//alert(arr.indexOf(10));
-//alert(arr.indexOf(20));
-//alert(arr.indexOf(30));
-//alert(arr.indexOf('30'));
+/*********************************************************/
 
-//var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
-//alert(arr.slice(0, 3));
-//alert(arr.slice(3));
-//var aCopy = arr.slice();
-//alert(arr === aCopy);
+var arr = [10, 20, '30', 'xyz'];
+arr.indexOf(10);
+arr.indexOf(20);
+arr.indexOf(30);
+arr.indexOf('30');
 
-//var arr = ['Microsoft', 'Apple', 'Yahoo', 'AOL', 'Excite', 'Oracle'];
-//arr.splice(2, 3, "Google", "Facebook");
-//alert(arr);
-//arr.splice(2, 2);
-//alert(arr);
-//arr.splice(2, 0, 'Google', 'Facebook');
-//alert(arr);
+/*********************************************************/
 
-//var arr = ['A', 'B', 'C'];
-//var added = arr.concat(1, 2, [3, 4, 5], ['Array', 'Bob']);
-//alert(added);
-//alert(added.join('-'));
+var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+arr.slice(0, 3);
+arr.slice(3);
+var aCopy = arr.slice();
+arr === aCopy;
+
+/*********************************************************/
+
+var arr = ['Microsoft', 'Apple', 'Yahoo', 'AOL', 'Excite', 'Oracle'];
+arr.splice(2, 3, "Google", "Facebook");
+arr;
+arr.splice(2, 2);
+arr;
+arr.splice(2, 0, 'Google', 'Facebook');
+arr;
+
+/*********************************************************/
+
+var arr = ['A', 'B', 'C'];
+var added = arr.concat(1, 2, [3, 4, 5], ['Array', 'Bob']);
+added;
+added.join('-');
+
+/*********************************************************/
 
 var arr = ['abc', 'cde', 'hello', 'world'];
 arr.sort();

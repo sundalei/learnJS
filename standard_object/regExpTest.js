@@ -31,3 +31,38 @@ re.exec('2-30');
 re.exec('4-31');
 
 /*******************************************************/
+
+var re = /^(\d+)(0*)$/;
+re.exec('102300'); // ["102300", "102300", ""]
+var re = /^(\d+?)(0*)$/;
+re.exec('102300'); // ["102300", "1023", "00"]
+
+/*******************************************************/
+
+var s = 'JavaScript, VBScript, JScript and ECMAScript';
+var re = /[a-zA-Z]+Script/g;
+
+re.exec(s);
+re.lastIndex;
+
+re.exec(s);
+re.lastIndex;
+
+re.exec(s);
+re.lastIndex;
+
+re.exec(s);
+re.lastIndex;
+
+re.exec(s);
+
+/*******************************************************/
+
+var re = /^<([\w\.]+)>\s+([\w\.]+@\w+\.[a-zA-Z]+)$/;
+var r = re.exec('<Tom Paris> tom@voyager.org');
+if (r === null || r.toString() !== ['<Tom Paris> tom@voyager.org', 'Tom Paris', 'tom@voyager.org'].toString()) {
+    alert('Failed');
+}
+else {
+    alert('Success!');
+}
