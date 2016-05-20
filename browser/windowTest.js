@@ -1,27 +1,34 @@
 'use strict'
 
-//alert('window inner size: ' + window.innerWidth + ' x ' + window.innerHeight);
+alert('window inner size: ' + window.innerWidth + ' x ' + window.innerHeight);
 
-/*
 alert('app Name = ' + navigator.appName + '\n' +
-      'app Version = ' + navigator.appVersion + '\n' + 
+      'app Version = ' + navigator.appVersion + '\n' +
       'language = ' + navigator.language + '\n' +
       'platform = ' + navigator.platform + '\n' +
       'userAgent = ' + navigator.userAgent);
-      */
 
-//alert('Screen size = ' + screen.width + ' x ' + screen.height);
+alert('Screen size = ' + screen.width + ' x ' + screen.height);
 
-/*
+/********************************************************************************/
+
+location.protocol;
+location.host;
+location.port;
+location.pathname;
+location.search;
+location.hash;
+
 if(confirm('reload current page ' + location.href + '?')) {
     location.reload();
 } else {
     location.assign('http://www.baidu.com');
 }
-*/
 
-//alert(document.title);
-//document.title = 'learn javascript with best effort';
+/********************************************************************************/
+
+alert(document.title);
+document.title = '努力学习JavaScript!';
 
 window.onload = function() {
     var menu = document.getElementById('drink-menu');
