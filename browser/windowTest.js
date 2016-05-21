@@ -43,3 +43,22 @@ window.onload = function() {
     alert(history.back());
     alert(history.forward());
 }
+
+/********************************************************************************/
+
+var menu = document.getElementById('drink-menu');
+var drinks = document.getElementsByTagName('dt');
+
+/********************************************************************************/
+
+var i, s, menu, drinks;
+
+menu = document.getElementById('drink-menu');
+menu.tagName;
+
+drinks = document.getElementsByTagName('dt');
+s = '提供的饮料有:';
+for(i = 0; i < drinks.length; i++) {
+  s = s + drinks[i].innerHTML + ',';
+}
+alert(s);
