@@ -1,6 +1,7 @@
 /**
  * Created by sundl.fnst on 2016/05/25.
  */
+package sample;
 public class Category {
     private String id;
     private String name;
