@@ -7,18 +7,18 @@
             var div = $('#abc');
             var divDom = div.get(0);
             var another = $(divDom);
-            
+
             var ps = $('p');
-            //alert(ps.length);
-            
+            ps.length;
+
             var a = $('.red');
-            //alert(a.length);
-            
+            a.length;
+
             var a = $('.red.green');
-            //alert(a.length);
-            
-            var email = $('input[name=email]');
-            alert(email.length);
+            a.length;
+
+            var email = $('[name=email]');
+            email.length;
         });
         </script>
     </head>
@@ -29,7 +29,7 @@
         <p class="green red"></p>
         <div class="red green"></div>
         <div class="blue green red"></div>
-        
+
         <form>
             <input type="text" name="email">
         </form>
