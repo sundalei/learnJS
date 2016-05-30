@@ -2,24 +2,21 @@
 
 <head>
     <title>descendant selector test</title>
-    <script type="text/javascript" src="jquery-2.2.3.js"></script>
-    <script type="text/javascript">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="jquery-2.2.3.js"></script>
+    <script>
         $().ready(function() {
-            $('input[name=email]').focus();
-           //var selected = $(':input');
-           //var selected = $(':file');
-           //var selected = $(':checkbox');
-           //var selected = $(':radio');
-           
-           //var selected = $(':disabled');
-           var selected = $('div:visible');
-           alert(selected.length);
-           
-           if (!(selected instanceof jQuery)) {
-               return alert('不是有效的jQuery对象!');
-           }
-           $('#test-jquery').find('*').css('background-color', '');
-           selected.css('background-color', '#ffd351'); 
+          $(':input');
+          $(':file');
+          $(':checkbox');
+          $(':radio');
+          $(':focus');
+          $(':checked');
+          $(':enabled');
+          $(':disabled');
+
+          $('div:visible');
+          $('div:hidden');
         });
     </script>
 </head>
