@@ -8,7 +8,7 @@
             var json = {};
             var langs = $('#test-form :input[type!=submit]');
             var inputs = langs.map(function() {
-                if(this.type !== "radio" || this.checked) {
+                if(this.type !== "radio" || this.checked) { //对于不是radio的input,取其值即可，当为radio的时候，要选择选中的那个
                     json[this.name] = this.value;
                 }
             });
@@ -21,7 +21,7 @@
                 alert('json变量不是string!');
             }
         });
-        
+
     </script>
 </head>
 
