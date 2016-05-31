@@ -2,27 +2,53 @@
 
 <head>
     <title>operate dom test</title>
-    <script type="text/javascript" src="jquery-2.2.3.js"></script>
-    <script type="text/javascript">
+    <script src="jquery-2.2.3.js"></script>
+    <script>
         $().ready(function() {
-            var width = $(window).width();
-            var height = $(window).height();
-            alert(width + " :" + height);
-            
-            width = $(document).width();
-            height = $(document).height();
-            alert(width + " : " + height);
-            
+            //浏览器可视狂傲
+            $(window).width();
+            $(window).height();
+
+            //HTML文档大小
+            $(document).width();
+            $(document).height();
+
             var div = $('#test-div');
-            width = $(div).width();
-            height = $(div).height();
-            alert(width + " : " + height);
+            $(div).width();
+            $(div).height();
+            div.width(400);
+            div.height('200px');
+
+            var div = $('#test-div');
+            div.attr('data');  //undefined
+            div.attr('name');
+            div.attr('name', 'Hello');
+            div.removeAttr('name');
+            div.attr('name'); //undefined
+
+            var radio = $('#test-radio');
+            radio.attr('checked');
+            radio.prop('checked');
+            radio.is(':checked');
+
+            var input = $('#test-input');
+            var select = $('#test-select');
+            var textarea = $('#test-textarea');
+
+            input.val();
+            input.val('sundalei2011@163.com');
+
+            select.val();
+            select.val('SH');
+
+            textarea.val();
+            textarea.val('Hi');
         });
     </script>
 </head>
 
 <body>
-    <div id="test-div">
+    <div id="test-div" name="Test" start="1">
     <ul id="test-css">
         <li class="lang dy"><span>JavaScript</span></li>
         <li class="lang"><span>Java</span></li>
@@ -30,7 +56,16 @@
         <li class="lang"><span>Swift</span></li>
         <li class="lang dy"><span>Scheme</span></li>
     </ul>
+    <input id="test-radio" type="radio" name="test" checked="checked" value="1">
     </div>
+
+    <input id="test-input" name="email" value="">
+    <select id="test-select" name="city">
+        <option value="BJ" selected>Beijing</option>
+        <option value="SH">Shanghai</option>
+        <option value="SZ">Shenzhen</option>
+    </select>
+    <textarea id="test-textarea">Hello</textarea>
 </body>
 
 </html>
