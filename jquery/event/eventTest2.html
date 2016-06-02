@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>jquery event test</title>
+    <script src="../jquery-2.2.3.js"></script>
+    <script>
+        $(function() {
+          var input = $('#test-input');
+          input.change(function() {
+            console.log('changed...');
+          });
+        });
+    </script>
+</head>
+
+<body>
+    <a id="test-link" href="#0">click me</a><br>
+    <br>
+    <input type="text" id="test-input">
+    <br>
+    <button id="testPopupButton1" class="uk-button" type="button">Button 1</button>
+    <button id="testPopupButton2" class="uk-button" type="button">Button 2</button>
+</body>
+
+</html>

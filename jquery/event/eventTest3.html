@@ -1,9 +1,9 @@
 <html>
 
 <head>
-    <title>alter DOM test</title>
-    <script type="text/javascript" src="../jquery/jquery-2.2.3.js"></script>
-    <script type="text/javascript">
+    <title>jquery event test</title>
+    <script src="../jquery-2.2.3.js"></script>
+    <script>
         $(function() {
            var form = $('#test-form');
            var langs = form.find('[name=lang]');
@@ -11,37 +11,41 @@
            var selectAllLabel = form.find('label.selectAll span.selectAll');
            var deselectAllLabel = form.find('label.selectAll span.deselectAll');
            var invertSelect = form.find('a.invertSelect');
-           
+
            form.find('*').show().off();
            form.find(':checkbox').prop('checked', false).off();
            deselectAllLabel.hide();
-           
+
            form.off().submit(function (e) {
                e.preventDefault();
                alert(form.serialize());
            });
 
-selectAll.click(function(){
-     langs.prop('checked',this.checked);
-     selectAllLabel.toggle(!this.checked);
-     deselectAllLabel.toggle(this.checked);
-});
-invertSelect.click(()=>langs.click());
-langs.click(function(){
-     var isAllChecked=langs.map(function(){return this.checked;}).get().reduce((x,y)=>x&&y);
-     if(isAllChecked||selectAll.is(":checked")){
-         selectAll.prop('checked',isAllChecked);
-         selectAllLabel.toggle(!isAllChecked);
-         deselectAllLabel.toggle(isAllChecked);
-     }
-});
+           selectAll.click(function() {
+             langs.prop('checked',this.checked);
+             selectAllLabel.toggle(!this.checked);
+             deselectAllLabel.toggle(this.checked);
+           });
+
+           invertSelect.click(()=>langs.click());
+
+           langs.click(function() {
+             var isAllChecked = langs.map(function() {
+               return this.checked;
+             }).get().reduce((x,y) => x&&y);
+             if(isAllChecked || selectAll.is(":checked")) {
+               selectAll.prop('checked',isAllChecked);
+               selectAllLabel.toggle(!isAllChecked);
+               deselectAllLabel.toggle(isAllChecked);
+             }
+           });
         });
     </script>
 </head>
 
 <body>
     <form id="test-form" action="test">
-        <legend>Select language to learn: </legend>
+        <legend>请选择想要学习的编程语言：</legend>
         <fieldset>
             <p>
                 <label class="selectAll">

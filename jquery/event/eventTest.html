@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>jquery event test</title>
+    <script src="../jquery-2.2.3.js"></script>
+    <script>
+        $(function() {
+            /*
+            var a = $('#test-link');
+            a.on('click', function() {
+              alert('Hello!');
+            });
+
+            a.click(function() {
+              alert('Hello!');
+            });
+            */
+
+            /*
+            $('#testMouseMoveDiv').mousemove(function(e) {
+              $('#testMouseMoveSpan').text('pageX = ' + e.pageX + ', pageY = ' + e.pageY);
+            });
+            */
+
+            var a = $('#test-link');
+            function hello() {
+              alert('hello!');
+            }
+
+            a.click(hello);
+
+            setTimeout(function() {
+              a.off('click', hello);
+            }, 10000);
+        });
+    </script>
+</head>
+
+<body>
+    <a id="test-link" href="#0">点我试试</a><br>
+    <br>
+    mousemove: <span id="testMouseMoveSpan"></span>
+    <div id="testMouseMoveDiv" style="display: block; width: 300px; height: 120px; border: 1px solid #ccc;"></div>
+</body>
+
+</html>
