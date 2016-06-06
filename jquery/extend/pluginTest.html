@@ -1,20 +1,21 @@
 <html>
     <head>
         <title>plugin test</title>
-        <script src="../jquery/jquery-2.2.3.js"></script>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <script src="../jquery-2.2.3.js"></script>
         <script>
 
         $(function() {
-            /*
+          /*
             $.fn.highlight1 = function() {
-                this.css('backgroundColor', '#fffceb').css('color', '#d85030');
-                return this;
+              // this已经绑定为jquery对象
+              this.css('backgroundColor', '#fffceb').css('color', '#d85030');
+              return this;
             }
 
             $('#test-highlight1 span').highlight1();
             */
 
-            /*
             $.fn.highlight2 = function(options) {
                 var bgcolor = options && options.backgroundColor || '#fffceb';
                 var color = options && options.color || '#d85030';
@@ -26,8 +27,8 @@
                 backgroundColor: '#00a8e6',
                 color: '#ffffff'
             });
-            */
 
+            /*
             $.fn.highlight = function(options) {
                 var opts = $.extend({}, $.fn.highlight.defaults, options);
                 this.css('backgroundColor', opts.backgroundColor).css('color', opts.color);
@@ -47,6 +48,7 @@
             $('#test-highlight1 p:last-child span').highlight({
                 color: '#dd1144'
             });
+            */
         });
 
         </script>
