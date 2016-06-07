@@ -5,23 +5,27 @@
         <script src="../jquery/jquery-2.2.3.js"></script>
         <script>
             $(document).ready(function(){
-                //var arr = [2, 4, 6, 8];
-                //alert(_.first(arr));
-                //alert(_.last(arr));
-                //var arr1 = _.flatten([1, [2], [3, [[4], [5]]]]);
-                //alert(arr1);
-                
-                //var names = ['Adam', 'Lisa', 'Bart'];
-                //var scores = [85, 92, 59];
-                //var namesAndScores = _.zip(names, scores);
-                //alert(namesAndScores);
-                //alert(_.unzip(namesAndScores));
-                //alert(JSON.stringify(_.object(names, scores)));
-                
-                alert(JSON.stringify(_.range(10)));
-                alert(JSON.stringify(_.range(1, 11)));
-                alert(JSON.stringify(_.range(0, 30, 5)));
-                alert(JSON.stringify(_.range(0, -10, -1)));
+                var arr = [2, 4, 6, 8];
+                _.first(arr);
+                _.last(arr);
+
+                _.flatten([1, [2], [3, [[4], [5]]]]);
+
+                var names = ['Adam', 'Lisa', 'Bart'];
+                var scores = [85, 92, 59];
+                _.zip(names, scores);
+
+                var namesAndScores = [['Adam', 85], ['Lisa', 92], ['Bart', 59]];
+                _.unzip(namesAndScores);
+
+                var names = ['Adam', 'Lisa', 'Bart'];
+                var scores = [85, 92, 59];
+                _.object(names, scores);
+
+                _.range(10);
+                _.range(1, 11);
+                _.range(0, 30, 5);
+                _.range(0, -10, -1);
             });
         </script>
     </head>
