@@ -10,19 +10,51 @@
                 this.age = age;
               }
 
+              var xiaoming = new Student('小明', 20);
+              _.keys(xiaoming);
+
+              /*****************************************************/
+              function Student(name, age) {
+                this.name = name;
+                this.age = age;
+              }
               Student.prototype.school = 'No.1 Middle School';
 
-              var xiaoming = new Student('xiaoming', 20);
+              var xiaoming = new Student('小明', 20);
               _.keys(xiaoming);
               _.allKeys(xiaoming);
               _.values(xiaoming);
 
+              /*****************************************************/
               var obj = {a : 1, b : 2, c : 3};
               _.mapObject(obj, (v, k) => 100 + v);
               _.invert(obj);
 
+              /*****************************************************/
               var a = {name : 'Bob', age : 20};
               _.extend(a, {age: 15}, {age: 88, city: 'Beijing'});
+
+              /*****************************************************/
+              var source = {
+                name: '小明',
+                age: 20,
+                skills: ['JavaScript', 'CSS', 'HTML']
+              };
+
+              var copied = _.clone(source);
+              alert(JSON.stringify(copied, null, '  '));
+
+              /*****************************************************/
+              var o1 = { name: 'Bob', skills: { Java: 90, JavaScript: 99 }};
+              var o2 = { name: 'Bob', skills: { JavaScript: 99, Java: 90 }};
+              o1 === o2;
+              _.isEqual(o1, o2);
+
+              /*****************************************************/
+              var o1 = ['Bob', { skills: ['Java', 'JavaScript'] }];
+              var o2 = ['Bob', { skills: ['Java', 'JavaScript'] }];
+              o1 === o2;
+              _.isEqual(o1, o2);
             });
         </script>
     </head>

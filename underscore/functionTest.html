@@ -6,20 +6,23 @@
     <script>
 
     console.log('Hello, world!');
+    // 输出'Hello, world!'
 
-    //var log = console.log;
-    //log('Hello, world!');
+    var log = console.log;
+    log('Hello, world!');
+    // Uncaught TypeError: Illegal invocation
 
-    //var log = console.log;
-    //log.call(console, 'Hello, world!');
+    var log = console.log;
+    // 调用call并传入console对象作为this:
+    log.call(console, 'Hello, world!');
 
-    //var log = _.bind(console.log, console);
-    //log('Hello, world!');
+    var log = _.bind(console.log, console);
+    log('Hello, world!');
 
-    //var pow2N = _.partial(Math.pow, 2);
-    //pow2N(3);
-    //pow2N(5);
-    //pow2N(10);
+    var pow2N = _.partial(Math.pow, 2);
+    pow2N(3);
+    pow2N(5);
+    pow2N(10);
 
     var cube = _.partial(Math.pow, _, 3);
     cube(3);

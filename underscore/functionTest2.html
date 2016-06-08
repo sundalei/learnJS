@@ -5,7 +5,6 @@
     <script src="../jquery/jquery-2.2.3.js"></script>
     <script>
 
-    /*
     function factorial(n) {
       console.log('start calculate ' + n + '!...');
       var s = 1, i = n;
@@ -15,9 +14,8 @@
       }
       console.log(n + '! = ' + s);
       return s;
-    }*/
+    }
 
-    /*
     var factorial = _.memoize(function(n) {
       console.log('start calculate ' + n + '!...');
       var s = 1, i = n;
@@ -27,7 +25,7 @@
       }
       console.log(n + '! = ' + s);
       return s;
-    });*/
+    });
 
     var factorial = _.memoize(function(n) {
       console.log('start calculate ' + n + '!...');
@@ -38,6 +36,19 @@
     });
 
     factorial(10);
+
+    var register = _.once(function() {
+      alert('Register ok!');
+    });
+
+    register();
+    register();
+
+    // 2秒后调用alert()
+    _.delay(alert, 2000);
+
+    var log = _.bind(console.log, console);
+    _.delay(log, 2000, 'Hello', 'world!');
 
     </script>
   </head>
