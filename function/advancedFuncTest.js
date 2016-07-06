@@ -12,8 +12,8 @@ function pow(x) {
 }
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var result = arr.map(pow);
-alert(result);
+arr.map(pow); // [1, 4, 9, 16, 25, 36, 49, 64, 81]
+arr.map(String);
 
 /*******************************************************************************/
 
@@ -46,7 +46,7 @@ var arr = [1, 3, 5, 7, 9];
 var result = arr.reduce(function(x, y) {
     return 10 * x + y;
 });
-alert(result);
+alert(result); // 13579
 
 /*******************************************************************************/
 
@@ -94,7 +94,7 @@ else {
 
 var arr = ['1', '2', '3'];
 var r;
-r = arr.map(function returnInt(x) {
+r = arr.map(function (x) {
     return parseInt(x, 10);
 });
 alert('[' + r[0] + ', ' + r[1] + ', ' + r[2] + ']');
