@@ -7,9 +7,8 @@ function lazy_sum(arr) {
   return sum;
 }
 
-var f = lazy_sum([1, 2, 3, 4, 5]);
-
-f();
+var f = lazy_sum([1, 2, 3, 4, 5]); // function sum()
+f(); // 50
 var f2 = lazy_sum([1, 2, 3, 4, 5]);
 f === f2;
 
