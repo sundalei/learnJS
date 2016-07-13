@@ -5,7 +5,7 @@ function* fib(max) {
    b = 1,
    n = 1;
 
-  while(n < max) {
+  while(n <= max) {
     yield a;
     t = a + b;
     a = b;
@@ -29,9 +29,9 @@ for(var x of fib(10)) {
 /*******************************************************************************/
 
 function* next_id() {
-    var num = 1;
+    var current_id = 1;
     while(true) {
-        yield num++;
+        yield current_id++;
     }
 }
 

@@ -33,8 +33,8 @@ obj.getAge();
 var obj = {
     birth : 1990,
     getAge : function() {
-        var b = this.birth;
-        var fn = () => new Date().getFullYear() - this.birth;
+        var b = this.birth;  // 1990
+        var fn = () => new Date().getFullYear() - this.birth; // this指向obj
         return fn();
     }
 };
@@ -50,4 +50,4 @@ var obj = {
     return fn.call({birth:2005}, year);
   }
 }
-obj.getAge(2010);
+obj.getAge(2016);
