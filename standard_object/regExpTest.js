@@ -1,14 +1,14 @@
 var re1 = /ABC\-001/;
 var re2 = new RegExp('ABC\\-001');
 
-re1;
-re2;
+re1; // /ABC\-001/
+re2; // /ABC\-001/
 
 /*******************************************************/
 var re = /^\d{3}\-\d{3,8}$/;
-re.test('010-12345');
-re.test('010-1234x');
-re.test('010 12345');
+re.test('010-12345'); // true
+re.test('010-1234x'); // false
+re.test('010 12345'); // false
 
 /*******************************************************/
 
@@ -42,27 +42,29 @@ re.exec('102300'); // ["102300", "1023", "00"]
 var s = 'JavaScript, VBScript, JScript and ECMAScript';
 var re = /[a-zA-Z]+Script/g;
 
-re.exec(s);
-re.lastIndex;
+re.exec(s); // ["JavaScript"]
+re.lastIndex; // 10
 
-re.exec(s);
-re.lastIndex;
+re.exec(s); // ["VBScript"]
+re.lastIndex; // 20
 
-re.exec(s);
-re.lastIndex;
+re.exec(s); // ["JScript"]
+re.lastIndex; // 29
 
-re.exec(s);
-re.lastIndex;
+re.exec(s); // ["ECMAScript"]
+re.lastIndex; // 44
 
-re.exec(s);
+re.exec(s); // null
 
 /*******************************************************/
+var re = /^[\w\.]+@[\w]+\.[\w]+$/;
 
+var re = /^<(\w+\s\w+)>\s(\w+@\w+\.\w+)$/;
 var re = /^<([\w\.]+)>\s+([\w\.]+@\w+\.[a-zA-Z]+)$/;
 var r = re.exec('<Tom Paris> tom@voyager.org');
 if (r === null || r.toString() !== ['<Tom Paris> tom@voyager.org', 'Tom Paris', 'tom@voyager.org'].toString()) {
-    alert('Failed');
+    alert('测试失败!');
 }
 else {
-    alert('Success!');
+    alert('测试成功!');
 }
