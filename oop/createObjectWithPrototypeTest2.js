@@ -18,15 +18,17 @@ function inherits(Child, Parent) {
   Child.prototype.constructor = Child;
 }
 
+// 实现原型继承链:
 inherits(PrimaryStudent, Student);  // add PrimaryStudent prototype to Student prototype
 
+// 绑定其他方法到PrimaryStudent原型:
 PrimaryStudent.prototype.getGrade = function() {
     return this.grade;
 }
 
 var xiaoming = new PrimaryStudent({
     name: 'xiaoming',
-    grade: 1
+    grade: 2
 });
 
 xiaoming.name;

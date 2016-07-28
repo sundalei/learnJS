@@ -5,16 +5,16 @@ function Student(name) {
   }
 }
 
-var xiaoming = new Student('xiaoming');
-xiaoming.name;
-xiaoming.hello();
+var xiaoming = new Student('小明');
+xiaoming.name; // '小明'
+xiaoming.hello(); // Hello, 小明!
 
-xiaoming.constructor === Student.prototype.constructor;
-Student.prototype.constructor === Student;
+xiaoming.constructor === Student.prototype.constructor; // true
+Student.prototype.constructor === Student; // true
 
-Object.getPrototypeOf(xiaoming) === Student.prototype;
+Object.getPrototypeOf(xiaoming) === Student.prototype; // true
 
-xiaoming instanceof Student;
+xiaoming instanceof Student; // true
 
 var xiaohong = new Student('xiaohong');
 xiaoming.hello === xiaohong.hello;   // false
@@ -31,13 +31,13 @@ Student.prototype.hello = function() {
 
 var xiaoming = new Student('xiaoming');
 var xiaohong = new Student('xiaohong');
-xiaohong.hello === xiaoming.hello;
+xiaohong.hello === xiaoming.hello; // true
 
 /******************************************************************/
 
 function Student(props) {
-  this.name = props.name || 'anonymous';
-  this.grade = props.grade || 1;
+  this.name = props.name || '匿名'; // 默认值为'匿名'
+  this.grade = props.grade || 1; // 默认值为1
 }
 
 Student.prototype.hello = function() {
@@ -52,4 +52,4 @@ var xiaoming = createStudent({
   name: 'xiaoming'
 });
 
-xiaoming.grade;
+xiaoming.grade; // 1
