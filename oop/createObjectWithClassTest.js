@@ -9,24 +9,14 @@ class Student {
     }
 }
 
-var xiaoming = new Student('xiaoming');
+var xiaoming = new Student('小明');
 xiaoming.hello();
 
 /********************************************************************************/
 
-class Student {
-    constructor(name) {
-        this.name = name;
-    }
-
-    hello() {
-        alert('Hello, ' + this.name + '!');
-    }
-}
-
 class PrimaryStudent extends Student {
     constructor(name, grade) {
-        super(name);
+        super(name); // 记得用super调用父类的构造方法!
         this.grade = grade;
     }
 
