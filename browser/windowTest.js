@@ -1,6 +1,7 @@
 'use strict'
 
 alert('window inner size: ' + window.innerWidth + ' x ' + window.innerHeight);
+alert('window outer size: ' + window.outerWidth + ' x ' + window.outerHeight);
 
 alert('app Name = ' + navigator.appName + '\n' +
       'app Version = ' + navigator.appVersion + '\n' +
@@ -9,9 +10,11 @@ alert('app Name = ' + navigator.appName + '\n' +
       'userAgent = ' + navigator.userAgent);
 
 alert('Screen size = ' + screen.width + ' x ' + screen.height);
+alert('Screen color depth = ' + screen.colorDepth);
 
-/********************************************************************************/
+/*****************************************************************************/
 
+// http://localhost:3000/item/3
 location.protocol;
 location.host;
 location.port;
@@ -22,34 +25,16 @@ location.hash;
 if(confirm('reload current page ' + location.href + '?')) {
     location.reload();
 } else {
-    location.assign('http://www.baidu.com');
+    location.assign('/');
 }
 
-/********************************************************************************/
+/*****************************************************************************/
 
 alert(document.title);
 document.title = '努力学习JavaScript!';
 
-window.onload = function() {
-    var menu = document.getElementById('drink-menu');
-    var drinks = document.getElementsByTagName('dt');
-    var i, s;
-    s = 'Provided drinks are: ';
-    for(i = 0; i < drinks.length; i++) {
-        s = s + drinks[i].innerHTML + ',';
-    }
-    //alert(s);
-    //alert(document.cookie.length);
-    alert(history.back());
-    alert(history.forward());
-}
-
-/********************************************************************************/
-
 var menu = document.getElementById('drink-menu');
 var drinks = document.getElementsByTagName('dt');
-
-/********************************************************************************/
 
 var i, s, menu, drinks;
 
