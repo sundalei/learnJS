@@ -1,13 +1,8 @@
-var self = document.getElementById('java');
+// 拿到待删除节点：
+var self = document.getElementById('to-be-removed');
+// 拿到父节点：
 var parent = self.parentElement;
+// 删除：
 var removed = parent.removeChild(self);
-removed === self;
+removed === self; // true
 
-/***************************************************************/
-var arr = ['HTML', 'CSS', 'JavaScript'];
-var parent = document.getElementById('test-list');
-for(var id = parent.children.length - 1; id >= 0; id--) {
-    if(arr.indexOf(parent.children[id].innerText) === -1) {
-        parent.removeChild(parent.children[id]);
-    }
-}
