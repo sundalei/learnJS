@@ -1,6 +1,9 @@
+'use strict';
+
 var perform = function () {
-    var canvas = document.getElementById('test-shape-canvas');
-    var ctx = canvas.getContext('2d');
+    var canvas = document.getElementById('test-shape-canvas'),
+        ctx = canvas.getContext('2d');
+    console.log(ctx);
     
     ctx.clearRect(0, 0, 200, 200);
     ctx.fillStyle = '#dddddd';
