@@ -6,17 +6,31 @@
     <script src="jquery-2.2.3.js"></script>
     <script>
         $().ready(function() {
-          $(':input');
-          $(':file');
-          $(':checkbox');
-          $(':radio');
-          $(':focus');
-          $(':checked');
-          $(':enabled');
-          $(':disabled');
+          var selected;
 
-          $('div:visible');
-          $('div:hidden');
+          // selected = $(':input');
+          // selected = $(':file');
+          // selected = $(':checkbox');
+          // selected = $(':radio');
+
+          // $('input[name=email]').focus();
+          // $('input[name=password]').focus();
+          // selected = $(':focus');
+
+          // selected = $(':checked'); // checkbox radio select
+          // selected = $(':enabled');
+          // selected = $(':disabled');
+
+          // selected = $('div:visible');
+          // selected = $('div:hidden');
+
+          if (!(selected instanceof jQuery)) {
+            return alert('不是有效的jQuery对象!');
+          }
+
+          $('#test-jquery').find('*').css('background-color', '');
+          selected.css('background-color', '#ffd351');
+          console.log(selected);
         });
     </script>
 </head>
