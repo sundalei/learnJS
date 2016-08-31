@@ -18,6 +18,7 @@
             ul.append($('#scheme'));
 
             //添加函数对象:
+            //若ul对象为2个，index的值就可以是0和1
             ul.append(function(index, html) {
               return '<li><span>Language - ' + index + '</span></li>';
             });
@@ -29,7 +30,7 @@
             li.remove();
 
             /************************************************************************/
-
+            
             var ul = $('#test-div>ul');
             ul.append('<li><span>Pascal</span></li>');
             ul.append('<li><span>Lua</span></li>');
@@ -43,13 +44,21 @@
             ul.find('span').each(function(index) {
               $(this).text(text[index]);
             });
+
         });
     </script>
 </head>
 
 <body>
     <li id="scheme"><span>Scheme</span></li>
-    <div id="test-div">
+    <div id="test-div" class="test">
+        <ul>
+            <li><span>JavaScript</span></li>
+            <li><span>Python</span></li>
+            <li><span>Swift</span></li>
+        </ul>
+    </div>
+    <div id="test-div2" class="test">
         <ul>
             <li><span>JavaScript</span></li>
             <li><span>Python</span></li>
